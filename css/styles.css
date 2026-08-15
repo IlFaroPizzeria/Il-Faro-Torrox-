@@ -430,7 +430,7 @@ a:focus-visible,button:focus-visible{
 }
 
 @media (max-width:760px){
-  .main-nav{
+    .main-nav{
     position:fixed;top:var(--header-h);left:0;right:0;
     background:var(--navy-900);
     flex-direction:column;
@@ -438,9 +438,14 @@ a:focus-visible,button:focus-visible{
     gap:18px;
     border-bottom:1px solid var(--line-dark);
     transform:translateY(-120%);
-    transition:transform .25s ease;
+    visibility:hidden;
+    transition:transform .25s ease, visibility 0s linear .25s;
   }
-  .main-nav.is-open{transform:translateY(0);}
+  .main-nav.is-open{
+    transform:translateY(0);
+    visibility:visible;
+    transition:transform .25s ease, visibility 0s linear 0s;
+  }
   .burger{display:flex;}
   .nav-right .btn-small{display:none;}
   .hero-content{margin-left:0;padding:0 24px;}
