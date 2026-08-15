@@ -92,8 +92,7 @@ a:focus-visible,button:focus-visible{
    ========================================================== */
 .site-header{
   position:sticky;top:0;z-index:100;
-  background:rgba(23,19,16,.93);
-  backdrop-filter:blur(8px);
+  background:var(--navy-950);
   border-bottom:1px solid var(--line-dark);
 }
 .nav-inner{
