@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Faro Ristorante Pizzeria — Torrox</title>
+<meta name="description" content="Il Faro Ristorante Pizzeria, auténtica pizza napolitana y pasta italiana frente al mar en Torrox, Málaga.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Il Faro Ristorante Pizzeria — Torrox">
+<meta property="og:description" content="Auténtica pizza napolitana y pasta italiana frente al mar en Torrox.">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="img/hero.jpg">
+
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="img/logo.png" alt="" width="42" height="42">
+      </span>
+      <span class="brand-word">
+        <span class="brand-line1">Il Faro</span>
+        <span class="brand-line2" data-i18n="brand.sub">Ristorante · Pizzeria</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
+      <a href="#carta" class="nav-carta" data-i18n="nav.menu">Carta</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+      <a href="#resenas" data-i18n="nav.reviews">Reseñas</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Idioma / Language / Sprache">
+        <button type="button" data-lang="es" class="lang-btn is-active">ES</button>
+        <button type="button" data-lang="en" class="lang-btn">EN</button>
+        <button type="button" data-lang="de" class="lang-btn">DE</button>
+        <button type="button" data-lang="it" class="lang-btn">IT</button>
+      </div>
+      <a href="tel:+34675301523" class="btn btn-tomato btn-small" data-i18n="nav.book">Reservar</a>
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-sky" aria-hidden="true">
+    <div class="beam"></div>
+    <svg class="lighthouse-silhouette" viewBox="0 0 200 400" aria-hidden="true">
+      <path d="M100 10 L130 60 L70 60 Z" class="lh-roof"/>
+      <rect x="82" y="60" width="36" height="26" class="lh-lamp"/>
+      <path d="M70 86 L130 86 L152 380 L48 380 Z" class="lh-body"/>
+      <rect x="60" y="120" width="80" height="10" class="lh-stripe"/>
+      <rect x="55" y="160" width="90" height="10" class="lh-stripe"/>
+      <rect x="50" y="200" width="100" height="10" class="lh-stripe"/>
+      <rect x="45" y="240" width="110" height="10" class="lh-stripe"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Paseo Marítimo · Torrox, Málaga</p>
+    <h1 class="hero-title">
+      <span data-i18n="hero.title1">Auténtica cocina italiana,</span><br>
+      <span class="hero-title-em" data-i18n="hero.title2">frente al mar.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">Pizza napolitana de masa madre, pasta fresca y postres 100% italianos, a un paso de la playa.</p>
+    <div class="hero-actions">
+      <a href="#carta" class="btn btn-tomato btn-large" data-i18n="hero.cta1">Ver la Carta</a>
+      <a href="#contacto" class="btn btn-outline btn-large" data-i18n="hero.cta2">Cómo llegar</a>
+    </div>
+  </div>
+
+  <a href="#nosotros" class="scroll-cue" aria-hidden="true"></a>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section section-light" id="nosotros">
+  <div class="wrap two-col">
+    <div class="col-media placeholder-media" data-placeholder="img/restaurante.jpg">
+      <img src="img/restaurante.jpg" alt="Terraza de Il Faro al atardecer, vistas al mar en Torrox" loading="lazy"
+           onerror="this.closest('.placeholder-media').classList.add('is-empty')">
+      <span class="placeholder-label">img/restaurante.jpg</span>
+    </div>
+    <div class="col-text">
+      <p class="eyebrow" data-i18n="about.eyebrow">En primera línea de mar</p>
+      <h2 data-i18n="about.title">Sabor italiano junto al Mediterráneo</h2>
+      <p data-i18n="about.p1">Il Faro es un ristorante pizzeria situado en primera línea del Paseo Marítimo de Torrox, un lugar donde disfrutar de la auténtica cocina italiana en un entorno único frente al mar.</p>
+      <p data-i18n="about.p2">Nuestra propuesta combina pizzas elaboradas con masa de larga fermentación, pasta fresca y una selección de recetas tradicionales preparadas con ingredientes de calidad y mucho cuidado en cada detalle.</p>
+      <p data-i18n="about.p3">Con una terraza con vistas al Mediterráneo y un ambiente acogedor, Il Faro es el lugar ideal para compartir una comida en familia, una cena con amigos o simplemente disfrutar del auténtico sabor de Italia junto al mar.</p>
+      <ul class="tag-list">
+        <li data-i18n="about.tag1">Pizza napolitana de masa madre</li>
+        <li data-i18n="about.tag2">Pasta fresca casera</li>
+        <li data-i18n="about.tag3">Opciones sin gluten</li>
+        <li data-i18n="about.tag4">Terraza frente al mar</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARTA ============ -->
+<section class="section section-dark" id="carta">
+  <div class="wrap">
+    <div class="carta-header">
+      <p class="eyebrow eyebrow-light" data-i18n="menu.eyebrow">Nuestra propuesta</p>
+      <div class="carta-badge">CARTA</div>
+      <p class="carta-note" data-i18n="menu.note">Selección de la carta — precios y platos orientativos, sujetos a temporada. Pídenos la carta completa en sala.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-cat">
+        <h3 data-i18n="menu.cat.pizze">Pizze Napoletane</h3>
+        <ul>
+          <li><span data-i18n="menu.item.margherita">Margherita — tomate, mozzarella, albahaca</span><b>9€</b></li>
+          <li><span data-i18n="menu.item.marinara">Marinara — tomate, ajo, orégano</span><b>7,5€</b></li>
+          <li><span data-i18n="menu.item.diavola">Diavola — salami picante, mozzarella</span><b>11€</b></li>
+          <li><span data-i18n="menu.item.faro">Il Faro — mariscos, ajo, perejil</span><b>14€</b></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 data-i18n="menu.cat.pasta">Pasta</h3>
+        <ul>
+          <li><span data-i18n="menu.item.paccheri">Paccheri al mare — marisco fresco</span><b>15€</b></li>
+          <li><span data-i18n="menu.item.tagliatelle">Tagliatelle ai funghi — setas</span><b>12€</b></li>
+          <li><span data-i18n="menu.item.lasagne">Lasagne della casa — espinacas</span><b>12,5€</b></li>
+          <li><span data-i18n="menu.item.gluten">Pasta sin gluten (opción)</span><b>+1,5€</b></li>
+        </ul>
+      </div>
+      <div class="menu-cat">
+        <h3 data-i18n="menu.cat.dolci">Dolci</h3>
+        <ul>
+          <li><span data-i18n="menu.item.tiramisu">Tiramisù della nonna</span><b>5,5€</b></li>
+          <li><span data-i18n="menu.item.panna">Panna cotta</span><b>5€</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="menu-disclaimer" data-i18n="menu.disclaimer">* Ejemplo de carta — sustituye estos platos y precios por los reales en <code>locales/*.js</code>.</p>
+
+    <div class="carta-cta">
+      <a href="tel:+34675301523" class="btn btn-gold btn-large" data-i18n="menu.reserve">Reservar mesa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section section-light" id="galeria">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="gallery.eyebrow">Un vistazo</p>
+    <h2 data-i18n="gallery.title">La cocina, el local, el mar</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-1.jpg">
+        <img src="img/gallery/foto-1.jpg" alt="Cartel de Il Faro Ristorante Pizzeria en el interior del local" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-1.jpg</span>
+      </div>
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-2.jpg">
+        <img src="img/gallery/foto-2.jpg" alt="Fachada de Il Faro en el Paseo Marítimo de Torrox" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-2.jpg</span>
+      </div>
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-3.jpg">
+        <img src="img/gallery/foto-3.jpg" alt="Pizza con jamón y albahaca fresca" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-3.jpg</span>
+      </div>
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-4.jpg">
+        <img src="img/gallery/foto-4.jpg" alt="Plato de gambas y ensalada" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-4.jpg</span>
+      </div>
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-5.jpg">
+        <img src="img/gallery/foto-5.jpg" alt="Vista al mar desde la terraza" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-5.jpg</span>
+      </div>
+      <div class="gallery-item placeholder-media" data-placeholder="img/gallery/foto-6.jpg">
+        <img src="img/gallery/foto-6.jpg" alt="Postres italianos" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-empty')">
+        <span class="placeholder-label">gallery/foto-6.jpg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section class="section section-dark" id="resenas">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light" data-i18n="reviews.eyebrow">Lo que dicen nuestros clientes</p>
+    <h2 class="h2-light" data-i18n="reviews.title">Reseñas reales de Google</h2>
+
+    <!--
+      WIDGET DE RESEÑAS EN VIVO
+      Sustituye este bloque por el código real de tu widget (Elfsight, EmbedSocial,
+      Trustindex, Tagembed... todos tienen plan gratuito) conectado a vuestra ficha
+      de Google Business Profile. Instrucciones paso a paso en README.md → "Reseñas".
+    -->
+    <div id="google-reviews-widget" class="reviews-widget-slot">
+      <p class="reviews-widget-placeholder" data-i18n="reviews.widgetPlaceholder">
+        Aquí se mostrará el widget en vivo con vuestras reseñas reales de Google
+        (ver instrucciones en README.md).
+      </p>
+    </div>
+
+    <!-- Tarjetas de ejemplo: sustituir por reseñas reales o quitar cuando el widget esté activo -->
+    <div class="review-cards">
+      <article class="review-card">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p data-i18n="reviews.example1">"Pizza fina y crujiente, justo como en Nápoles. Ambiente familiar y vistas al mar inmejorables."</p>
+        <span class="review-example-tag" data-i18n="reviews.exampleTag">Ejemplo — sustituir por reseña real</span>
+      </article>
+      <article class="review-card">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p data-i18n="reviews.example2">"La pasta fresca y el trato del personal hacen que siempre volvamos cuando visitamos Torrox."</p>
+        <span class="review-example-tag" data-i18n="reviews.exampleTag">Ejemplo — sustituir por reseña real</span>
+      </article>
+      <article class="review-card">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <p data-i18n="reviews.example3">"Sitio acogedor en el paseo marítimo, ideal para cenar viendo el atardecer."</p>
+        <span class="review-example-tag" data-i18n="reviews.exampleTag">Ejemplo — sustituir por reseña real</span>
+      </article>
+    </div>
+
+    <div class="reviews-cta">
+      <a href="https://maps.app.goo.gl/qT5vMoULCiohNijX7" target="_blank" rel="noopener" class="btn btn-gold btn-large" data-i18n="reviews.cta">
+        Ver todas nuestras reseñas en Google ⭐
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section section-light" id="contacto">
+  <div class="wrap two-col">
+    <div class="col-text">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Te esperamos</p>
+      <h2 data-i18n="contact.title">Reserva o ven a vernos</h2>
+
+      <ul class="contact-list">
+        <li>
+          <strong data-i18n="contact.address">Dirección</strong>
+          <a href="https://maps.app.goo.gl/qT5vMoULCiohNijX7" target="_blank" rel="noopener">Paseo Marítimo de Ferrara (Av. el Faro, 18), 29793 Torrox, Málaga</a>
+        </li>
+        <li>
+          <strong data-i18n="contact.phone">Teléfono</strong>
+          <a href="tel:+34675301523">+34 675 30 15 23</a>
+        </li>
+        <li>
+          <strong data-i18n="contact.email">Email</strong>
+          <a href="mailto:ilfaroristorantepizzeria@gmail.com">ilfaroristorantepizzeria@gmail.com</a>
+        </li>
+        <li>
+          <strong data-i18n="contact.hours">Horario</strong>
+          <span data-i18n="contact.hoursValue">Abierto todos los días, 18:30–00:00 (confirmar temporada)</span>
+        </li>
+        <li>
+          <strong data-i18n="contact.social">Redes</strong>
+          <a href="https://instagram.com/ilfaro.ristorantepizzeria" target="_blank" rel="noopener">Instagram</a>
+        </li>
+      </ul>
+
+      <a href="tel:+34675301523" class="btn btn-tomato btn-large" data-i18n="contact.cta">Llamar y reservar</a>
+    </div>
+
+    <div class="col-media map-media">
+      <iframe
+        title="Il Faro Ristorante Pizzeria en el mapa"
+        src="https://www.google.com/maps?q=36.727652,-3.958769(Il+Faro+Ristorante+Pizzeria)&z=17&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="brand brand-footer">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="img/logo.png" alt="" width="30" height="30">
+      </span>
+      <span class="brand-line1">Il Faro</span>
+    </div>
+    <p class="footer-tag" data-i18n="footer.tag">Ristorante · Pizzeria — Torrox, Málaga</p>
+    <p class="footer-copy">© <span id="year"></span> Il Faro Ristorante Pizzeria. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </div>
+</footer>
+
+<a href="#carta" class="fab-carta" data-i18n="fab.carta">Carta</a>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

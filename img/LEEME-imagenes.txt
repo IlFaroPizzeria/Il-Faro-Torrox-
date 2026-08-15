@@ -1,0 +1,17 @@
+Ya colocadas (fotos reales de Il Faro):
+
+img/logo.png                -> logo oficial en cabecera y pie de pagina
+img/favicon.png              -> icono del navegador (recortado del logo)
+img/restaurante.jpg          -> terraza al atardecer, seccion "Nosotros"
+img/gallery/foto-1.jpg       -> cartel "Il Faro" en el interior
+img/gallery/foto-2.jpg       -> fachada en el Paseo Maritimo
+img/gallery/foto-3.jpg       -> pizza con jamon y albahaca
+img/gallery/foto-4.jpg       -> plato de gambas y ensalada
+
+Pendientes (opcionales, para completar la galeria de 6 fotos):
+
+img/gallery/foto-5.jpg
+img/gallery/foto-6.jpg       -> por ejemplo, una foto de pasta o de postre
+
+Mientras no esten, esos dos huecos muestran un marcador de posicion elegante,
+asi que la web se ve bien igualmente.

@@ -1,0 +1,449 @@
+/* ==========================================================
+   IL FARO — Ristorante Pizzeria, Torrox
+   Design tokens
+   ========================================================== */
+:root{
+  --navy-950:#171310;
+  --navy-900:#211B15;
+  --navy-800:#2D251C;
+  --navy-700:#3C3122;
+  --gold:#AD8B57;
+  --gold-light:#C9AD7B;
+  --tomato:#6E2226;
+  --tomato-dark:#4C1417;
+  --cream:#F1EADA;
+  --cream-dim:#E5D9BF;
+  --ink:#1E1A14;
+  --ink-soft:#4A4032;
+  --line-dark: rgba(241,234,218,0.13);
+  --line-light: rgba(30,26,20,0.12);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius: 4px;
+  --wrap: 1180px;
+  --header-h: 76px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{margin:0;padding:0;list-style:none;}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;margin:0 0 .5em;line-height:1.1;}
+p{line-height:1.6;color:var(--ink-soft);}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;}
+
+/* focus visibility */
+a:focus-visible,button:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 28px;
+  border-radius:var(--radius);
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:.95rem;
+  letter-spacing:.02em;
+  border:1.5px solid transparent;
+  cursor:pointer;
+  transition:transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-large{padding:16px 34px;font-size:1rem;}
+.btn-small{padding:10px 18px;font-size:.85rem;}
+.btn-tomato{background:var(--tomato);color:var(--cream);}
+.btn-tomato:hover{background:var(--tomato-dark);}
+.btn-gold{background:var(--gold);color:var(--navy-950);}
+.btn-gold:hover{background:var(--gold-light);}
+.btn-outline{border-color:var(--cream);color:var(--cream);}
+.btn-outline:hover{background:rgba(241,234,218,.1);}
+
+.eyebrow{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--tomato);
+  letter-spacing:.03em;
+  margin:0 0 .6em;
+}
+.eyebrow-light{color:var(--gold-light);}
+.h2-light{color:var(--cream);}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(23,19,16,.93);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line-dark);
+}
+.nav-inner{
+  max-width:var(--wrap);margin:0 auto;padding:0 24px;
+  height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{display:flex;flex-shrink:0;}
+.brand-mark img{
+  width:100%;height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 0 1px var(--line-dark);
+}
+.brand-word{display:flex;flex-direction:column;line-height:1.15;}
+.brand-line1{
+  font-family:var(--font-display);
+  font-weight:600;font-size:1.3rem;color:var(--cream);
+}
+.brand-line2{
+  font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold-light);
+}
+
+.main-nav{display:flex;gap:28px;}
+.main-nav a{
+  color:var(--cream);font-size:.92rem;font-weight:500;
+  position:relative;padding:6px 0;
+}
+.main-nav a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--gold);transition:width .2s ease;
+}
+.main-nav a:hover::after{width:100%;}
+.nav-carta{
+  color:var(--gold-light) !important;font-weight:700 !important;
+}
+
+.nav-right{display:flex;align-items:center;gap:16px;}
+.lang-switch{display:flex;gap:4px;background:var(--navy-800);border-radius:20px;padding:3px;}
+.lang-btn{
+  border:none;background:transparent;color:var(--cream);
+  font-family:var(--font-body);font-size:.72rem;font-weight:600;
+  padding:6px 10px;border-radius:16px;cursor:pointer;letter-spacing:.03em;
+}
+.lang-btn.is-active{background:var(--gold);color:var(--navy-950);}
+
+.burger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:36px;height:36px;background:none;border:none;cursor:pointer;
+}
+.burger span{display:block;width:100%;height:2px;background:var(--cream);}
+
+/* ==========================================================
+   HERO — lighthouse beam
+   ========================================================== */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 20% 100%, rgba(173,139,87,.08), transparent 55%),
+    linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-800) 100%);
+}
+.hero-sky{position:absolute;inset:0;}
+.beam{
+  position:absolute;
+  top:14%;
+  right:8%;
+  width:1px;height:1px;
+  background:transparent;
+}
+.beam::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;
+  width:1400px;height:1400px;
+  margin-left:-700px;margin-top:-700px;
+  background:conic-gradient(from 0deg,
+    transparent 0deg,
+    rgba(201,173,123,.16) 6deg,
+    transparent 16deg,
+    transparent 360deg);
+  animation:sweep 13s linear infinite;
+  mix-blend-mode:soft-light;
+}
+@keyframes sweep{ to { transform:rotate(360deg); } }
+
+.lighthouse-silhouette{
+  position:absolute;
+  right:6%;
+  bottom:0;
+  height:62%;
+  opacity:.9;
+}
+.lh-roof{fill:var(--gold);}
+.lh-lamp{fill:var(--gold-light);}
+.lh-body{fill:var(--navy-950);stroke:var(--line-dark);stroke-width:1;}
+.lh-stripe{fill:var(--navy-700);}
+
+.hero-content{
+  position:relative;z-index:2;
+  max-width:720px;
+  margin-left:min(8vw, 100px);
+  padding:0 24px;
+}
+.hero-title{
+  font-size:clamp(2.2rem, 5vw, 3.6rem);
+  color:var(--cream);
+}
+.hero-title-em{
+  color:var(--gold-light);
+  font-style:italic;
+  font-weight:500;
+}
+.hero-sub{
+  color:rgba(241,234,218,.82);
+  font-size:1.08rem;
+  max-width:46ch;
+  margin-bottom:2em;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+
+.scroll-cue{
+  position:absolute;left:50%;bottom:28px;transform:translateX(-50%);
+  width:22px;height:36px;border:2px solid rgba(241,234,218,.5);
+  border-radius:12px;
+}
+.scroll-cue::after{
+  content:"";position:absolute;left:50%;top:6px;
+  width:4px;height:8px;margin-left:-2px;
+  background:var(--gold-light);border-radius:2px;
+  animation:bob 1.6s ease-in-out infinite;
+}
+@keyframes bob{ 0%,100%{transform:translateY(0);opacity:1;} 60%{transform:translateY(10px);opacity:.3;} }
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+.section{padding:100px 0;}
+.section-light{background:var(--cream);}
+.section-dark{background:var(--navy-900);}
+.section-dark h2, .section-dark h3{color:var(--cream);}
+.section-dark p{color:rgba(241,234,218,.78);}
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+}
+.col-media{scroll-margin-top:var(--header-h);}
+
+/* image placeholder handling: if onerror fires, hide broken img and show label */
+.placeholder-media{
+  position:relative;
+  aspect-ratio:4/5;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--navy-800), var(--navy-700));
+  display:flex;align-items:center;justify-content:center;
+}
+.placeholder-media img{width:100%;height:100%;object-fit:cover;}
+.placeholder-label{
+  display:none;
+  color:var(--gold-light);
+  font-family:var(--font-body);font-size:.8rem;
+  border:1.5px dashed rgba(201,173,123,.4);
+  padding:10px 16px;border-radius:4px;
+}
+.placeholder-media.is-empty img{display:none;}
+.placeholder-media.is-empty .placeholder-label{display:block;}
+
+.tag-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6em;}
+.tag-list li{
+  font-size:.82rem;font-weight:600;
+  color:var(--tomato);
+  border:1.5px solid var(--tomato);
+  padding:6px 14px;border-radius:20px;
+}
+
+/* ---------- carta ---------- */
+.carta-header{text-align:center;max-width:680px;margin:0 auto 56px;}
+.carta-badge{
+  display:inline-block;
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(2.4rem, 6vw, 4rem);
+  letter-spacing:.06em;
+  color:var(--navy-950);
+  background:var(--gold);
+  padding:16px 56px;
+  border-radius:var(--radius);
+  margin:.2em 0 .5em;
+  scroll-margin-top:var(--header-h);
+}
+.carta-note{color:rgba(241,234,218,.72);max-width:56ch;margin:0 auto;}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:40px;
+}
+.menu-cat h3{
+  color:var(--gold-light);
+  border-bottom:1px solid var(--line-dark);
+  padding-bottom:.5em;
+  margin-bottom:1em;
+  font-size:1.25rem;
+}
+.menu-cat li{
+  display:flex;justify-content:space-between;gap:14px;
+  padding:10px 0;
+  border-bottom:1px dashed var(--line-dark);
+  color:rgba(241,234,218,.85);
+  font-size:.94rem;
+}
+.menu-cat li b{color:var(--gold-light);white-space:nowrap;}
+.menu-disclaimer{
+  text-align:center;font-size:.8rem;color:rgba(241,234,218,.45);
+  margin-top:40px;
+}
+.menu-disclaimer code{color:var(--gold-light);}
+.carta-cta{text-align:center;margin-top:36px;}
+
+/* ---------- galería ---------- */
+#galeria h2{max-width:20ch;}
+.gallery-grid{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+.gallery-item{aspect-ratio:1/1;}
+.gallery-item .placeholder-label{font-size:.72rem;}
+
+/* ---------- reseñas ---------- */
+#resenas h2{max-width:22ch;}
+.reviews-widget-slot{
+  margin:40px 0;
+  min-height:80px;
+  border:1.5px dashed var(--line-dark);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.reviews-widget-placeholder{
+  color:rgba(241,234,218,.5);
+  font-size:.85rem;text-align:center;margin:0;max-width:52ch;
+}
+.review-cards{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  margin-top:8px;
+}
+.review-card{
+  background:var(--navy-800);
+  border-radius:var(--radius);
+  padding:26px;
+  border:1px solid var(--line-dark);
+}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:.6em;font-size:.95rem;}
+.review-card p{color:var(--cream);font-size:.95rem;font-style:italic;}
+.review-example-tag{
+  display:block;margin-top:14px;
+  font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--tomato);
+}
+.reviews-cta{text-align:center;margin-top:44px;}
+
+/* ---------- contacto ---------- */
+.contact-list{margin:28px 0 32px;display:flex;flex-direction:column;gap:18px;}
+.contact-list li{display:flex;flex-direction:column;gap:2px;}
+.contact-list strong{
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--tomato);font-weight:700;
+}
+.contact-list a, .contact-list span{font-size:1rem;color:var(--ink);}
+.contact-list a:hover{color:var(--tomato);}
+.map-media{
+  aspect-ratio:4/5;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--line-light);
+}
+.map-media iframe{width:100%;height:100%;border:0;}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.site-footer{
+  background:var(--navy-950);
+  padding:48px 0;
+  text-align:center;
+}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.brand-footer{color:var(--cream);}
+.footer-tag{color:rgba(241,234,218,.6);font-size:.85rem;margin:0;}
+.footer-copy{color:rgba(241,234,218,.4);font-size:.78rem;margin:0;}
+
+/* ---------- floating "Carta" button ---------- */
+.fab-carta{
+  position:fixed;
+  right:22px;bottom:22px;
+  z-index:90;
+  background:var(--tomato);
+  color:var(--cream);
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.04em;
+  padding:14px 26px;
+  border-radius:var(--radius);
+  box-shadow:0 10px 24px rgba(23,19,16,.4);
+  transition:transform .15s ease, background .2s ease;
+}
+.fab-carta:hover{background:var(--tomato-dark);transform:translateY(-2px);}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width:900px){
+  .two-col{grid-template-columns:1fr;gap:36px;}
+  .menu-grid{grid-template-columns:1fr;}
+  .review-cards{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:760px){
+  .main-nav{
+    position:fixed;top:var(--header-h);left:0;right:0;
+    background:var(--navy-900);
+    flex-direction:column;
+    padding:20px 24px;
+    gap:18px;
+    border-bottom:1px solid var(--line-dark);
+    transform:translateY(-120%);
+    transition:transform .25s ease;
+  }
+  .main-nav.is-open{transform:translateY(0);}
+  .burger{display:flex;}
+  .nav-right .btn-small{display:none;}
+  .hero-content{margin-left:0;padding:0 24px;}
+  .lighthouse-silhouette{opacity:.35;right:-4%;}
+  .section{padding:70px 0;}
+  .carta-badge{padding:14px 32px;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .fab-carta{padding:12px 20px;font-size:.9rem;}
+}
